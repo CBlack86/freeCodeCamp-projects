@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Survery Form</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">freeCodeCamp Survery Form</h1>
+    <p id="description">Please fill this out to help us improve</p>
+    <form id="survey-form">
+      <fieldset>
+        <label for="name" id="name-label">Name: <input name="name" id="name" required type="text" placeholder="Enter your name"></label>
+        <label for="email" id="email-label">Email: <input name="email" id="email" required type="email" placeholder="Enter your email address"></label>
+        <label for="number" id="number-label">Age: <input name="number" id="number" type="number" min="13" max="120" placeholder="Enter Age"></label>
+      </fieldset>
+      <fieldset>
+        <label for="dropdown">What can we improve on?
+          <select id="dropdown" name="dropdown">
+            <option>(select one)</option>
+            <option>Projects</option>
+            <option>Community</option>
+            <option>Challenges</option>
+            <option>Open Source</option>
+          </select>
+      </fieldset>
+      <fieldset>
+        <h4>How much have you enjoyed this site?</h4>
+        <label for="tons"><input type="radio" id="tons" name="happiness" class="inline" value="Tons"> Tons</label>
+        <label for="a-little-bit"><input type="radio" id="a-little-bit" name="happiness" class="inline" value="A Little Bit"> A Little Bit</label>
+        <label for="not-at-all"><input type="radio" id="not-at-all" name="happiness" class="inline" value="Not at All"> Not at All</label>
+      </fieldset>
+      <fieldset>
+        <h4>What would you like to see in the future? (Check all that apply)</h4>
+        <label for="live-instruction"><input type="checkbox" value="live-instruction" name="live-instruction" class="inline"> Live Instruction</label>
+        <label for="more-tutorials"><input type="checkbox" value="more-tutorials" name="more-tutorials" class="inline"> More Tutorials</label>
+        <label for="front-end"><input type="checkbox" value="front-end" name="front-end" class="inline"> Front End Projects</label>
+        <label for="back-end"><input type="checkbox" value="back-end" name="back-end" class="inline"> Back End Projects</label>
+        <label for="comments">Please provide any additional comments you would like to add:
+          <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Place additional comments here"></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit">
+    </form>
+  </body>
+</html>
