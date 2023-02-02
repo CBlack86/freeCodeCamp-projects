@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #bcbcbc
+}
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: lightblue;
+  padding: 0px 20px;
+  min-height: 75px;
+}
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+  }
+}
+#header-img {
+  width: 60vw;
+  display: flex;
+}
+ul {
+  list-style-type: none;
+}
+@media (max-width: 650px) {
+  nav {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+  nav li {
+    padding-bottom: 5px;
+  }
+}
+nav > ul {
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+a {
+  text-decoration: none;
+}
+#greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  margin-top: 75px;
+}
+
+#greeting input[type='email'] {
+  max-width: 275px;
+  width: 100%;
+  padding: 5px;
+}
+
+#greeting input[type='submit'] {
+  max-width: 150px;
+  width: 100%;
+  height: 30px;
+  margin: 15px 0;
+  border: 0;
+  background-color: #095a97;
+  color: white;
+}
+.content {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.icon-1, .icon-2, .icon-3 {
+  display: flex;
+  justify-content: center;
+  color: #2b8ed9
+}
+.text-1, .text-2, .text-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container-1, .container-2, .container-3 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+h2 {
+  color: #2b8ed9;
+}
+#how-it-works {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#how-it-works > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+#pricing {
+   margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+/* #tenor, #bass, #valve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+} */
+.instrument {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+.instrument >.trombone-type {
+   background-color: #ddd;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.instrument > h3 {
+  margin-top: 15px;
+}
+
+.instrument > ul {
+  margin: 15px 0;
+}
+
+.instrument > ul > li {
+  padding: 5px 0;
+}
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
