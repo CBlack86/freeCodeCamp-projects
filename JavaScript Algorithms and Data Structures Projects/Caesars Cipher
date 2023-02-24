@@ -1,0 +1,24 @@
+function rot13(str) {
+ let original = str.split('')
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split('')
+  let i = 0;
+  let finalStr = "";
+  while(i<original.length){
+  let indexVal = alphabet.indexOf(original[i])
+  if(indexVal>= 13){
+    indexVal -=13
+  }else if(indexVal===-1){
+    indexVal = 33
+  }
+  else{
+    indexVal += 13
+  }
+  finalStr+=alphabet[indexVal];
+  finalStr = finalStr.replace(undefined, original[i])
+
+  i++;
+  }
+  return finalStr;
+}
+
+rot13("SERR PBQR PNZC");
