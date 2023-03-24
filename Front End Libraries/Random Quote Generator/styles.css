@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+#quote-box {
+  border-radius: 5px;
+  position: relative;
+  width: 450px;
+  height: 300px;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+}
+#text {
+  display: flex;
+  text-align: center;
+  height: auto;
+  clear: both;
+  font-weight: 500;
+  font-size: 1.75em;
+}
+#author {
+  display: flex;
+  justify-content: right;
+  height: auto;
+  clear: both;
+  padding-top: 20px;
+  font-size: 1em;
+  text-align: right;
+}
+#quote-box .buttons {
+  margin: auto;
+  display: flex;
+}
+#quote-box .quote-text {
+  display: flex;
+  flex-direction: column;
+}
+#quote-box .buttons .button {
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #333;
+  outline: none;
+  font-size: 0.85em;
+  padding: 8px 18px 6px 18px;
+  margin-top: 30px;
+  opacity: 1;
+  cursor: pointer;
+  position: relative;
+}
+#quote-box .buttons .button:hover {
+  opacity: 0.9;
+}
+#tweet-quote {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  padding-top: 8px;
+  font-size: 1.2em;
+  margin-right: 5px;
+}
+#new-quote {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
