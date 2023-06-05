@@ -1,22 +1,30 @@
 import "./styles.css";
 
 const WorkController = ({
-  workTime,
+  time,
+  setTime,
   increaseWorkTime,
   decreaseWorkTime,
   timeRunning,
-  setCurrentTime
+  setCurrentTime,
+  setMin,
+  workTime,
+  setWorkTime,
+  timerType
 }) => {
   const handleWorkIncrease = () => {
-    increaseWorkTime();
-    if (timeRunning === false) {
-      setCurrentTime({ workTime });
-    }
+    if (workTime <= 59) {
+      if (timerType === "work") {
+        setTime(workTime + 1);
+        setWorkTime(workTime + 1);
+      } else setWorkTime(workTime + 1);
+    } else return;
   };
   const handleWorkDecrease = () => {
-    decreaseWorkTime();
     if (timeRunning === false) {
-      setCurrentTime({ workTime });
+      if (workTime >= 1) {
+        setWorkTime(workTime - 1);
+      } else return;
     }
   };
 
