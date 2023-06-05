@@ -5,18 +5,25 @@ const BreakController = ({
   increaseBreakTime,
   decreaseBreakTime,
   timeRunning,
-  setCurrentTime
+  setCurrentTime,
+  setMin,
+  setBreakTime,
+  timerType,
+  min,
+  sec
 }) => {
   const handleBreakIncrease = () => {
-    increaseBreakTime();
     if (timeRunning === false) {
-      setCurrentTime({ breakTime });
+      if (breakTime <= 59) {
+        setBreakTime(breakTime + 1);
+      } else return;
     }
   };
   const handleBreakDecrease = () => {
-    decreaseBreakTime();
     if (timeRunning === false) {
-      setCurrentTime({ breakTime });
+      if (breakTime >= 1) {
+        setBreakTime(breakTime - 1);
+      } else return;
     }
   };
 
