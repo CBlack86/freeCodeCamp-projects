@@ -5,18 +5,24 @@ import WorkController from "./workController.js";
 import BreakController from "./breakController.js";
 
 export default function App() {
-  const [timerType, setTimerType] = useState("Work");
+  const [timerType, setTimerType] = useState("work");
   const [workTime, setWorkTime] = useState(25);
   const [breakTime, setBreakTime] = useState(5);
   const [timeRunning, setTimeRunning] = useState(false);
-  const [currentTime, setCurrentTime] = useState("25 : 00");
+  const [time, setTime] = useState("2:00");
   const [timerId, setTimerId] = useState(0);
+  const [min, setMin] = useState(workTime);
+  const [sec, setSec] = useState(0);
 
   const increaseWorkTime = () => {
-    setWorkTime(workTime + 1);
+    if (timerType === "Work") {
+      setWorkTime(workTime + 1);
+    }
   };
   const decreaseWorkTime = () => {
-    setWorkTime(workTime - 1);
+    if (timerType === "Work") {
+      setWorkTime(workTime - 1);
+    }
   };
   const increaseBreakTime = () => {
     setBreakTime(breakTime + 1);
@@ -30,31 +36,44 @@ export default function App() {
       <h1>POMODORO CLOCK</h1>
       <Timer
         timerType={timerType}
-        currentTime={currentTime}
+        time={time}
         timeRunning={timeRunning}
         timerId={timerId}
-        setCurrentTime={setCurrentTime}
+        setTime={setTime}
         setTimeRunning={setTimeRunning}
         workTime={workTime}
         breakTime={breakTime}
         setTimerId={setTimerId}
         setTimerType={setTimerType}
+        min={min}
+        setMin={setMin}
+        sec={sec}
+        setSec={setSec}
+        setWorkTime={setWorkTime}
+        setBreakTime={setBreakTime}
       />
       <div>
         <WorkController
+          time={time}
           workTime={workTime}
           increaseWorkTime={increaseWorkTime}
           decreaseWorkTime={decreaseWorkTime}
           timeRunning={timeRunning}
-          setCurrentTime={setCurrentTime}
+          setTime={setTime}
+          min={min}
+          setMin={setMin}
+          setWorkTime={setWorkTime}
         />
-        <button onClick={Timer()}>Start/Stop</button>
+
         <BreakController
           breakTime={breakTime}
           increaseBreakTime={increaseBreakTime}
           decreaseBreakTime={decreaseBreakTime}
           timeRunning={timeRunning}
-          setCurrentTime={setCurrentTime}
+          setTime={setTime}
+          setMin={setMin}
+          setBreakTime={setBreakTime}
+          timerType={timerType}
         />
       </div>
     </div>
