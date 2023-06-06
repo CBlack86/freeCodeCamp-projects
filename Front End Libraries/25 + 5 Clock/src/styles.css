@@ -4,6 +4,8 @@
 body {
   background-color: teal;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 h1 {
   color: white;
@@ -14,16 +16,20 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 20px;
 }
 .timer {
-  border: 5px double black;
+  border: 8px double black;
   border-radius: 50%;
   width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.controller {
+  display: flex;
+  gap: 20px;
 }
 .countDown {
   display: flex;
@@ -36,6 +42,11 @@ h1 {
 .timeAdj {
   margin: 20px;
   color: white;
+}
+.reset_button {
+  border: 2px black solid;
+  border-radius: 20px;
+  padding: 5px;
 }
 button {
   cursor: pointer;
